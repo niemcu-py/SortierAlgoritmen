@@ -7,12 +7,14 @@ import quick_sort as qs
 class TestBubbleSort(unittest.TestCase):
     """class for the tests concerning the bubble sort algorithm"""
     def test_empty_list_bs(self):
+        """test with an empty list"""
         test_list = []
         self.assertEqual(bs.bubblesort(test_list), [])
 
 class TestQuickSort(unittest.TestCase):
     """class for the tests concerning the quick sort algorithm"""
     def test_empty_list_qs(self):
+        """test with an empty list"""
         test_list = []
         self.assertEqual(qs.quicksort(test_list), [])
 

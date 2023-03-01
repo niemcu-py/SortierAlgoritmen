@@ -2,6 +2,9 @@
 
 def quicksort(o_list):
     """the implementation of the quick sort algorithm"""
+    if o_list == []:
+        return []
+    
     if len(o_list) % 2 == 0:
         pivot = o_list[int(len(o_list)/2)]
     else:
