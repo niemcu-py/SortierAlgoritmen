@@ -1,4 +1,7 @@
+"""This module contains a quicksort algorithm"""
+
 def quicksort(o_list):
+    """the implementation of the quick sort algorithm"""
     if len(o_list) % 2 == 0:
         pivot = o_list[int(len(o_list)/2)]
     else:
@@ -23,4 +26,4 @@ def quicksort(o_list):
 
     rlist = s_list + m_list + l_list
 
-    return(rlist)
+    return rlist
