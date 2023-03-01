@@ -4,15 +4,17 @@ import unittest
 import bubble_sort as bs
 import quick_sort as qs
 
-class testBubbleSort(unittest.TestCase):
-    def testEmptyListBS(self):
+class TestBubbleSort(unittest.TestCase):
+    """class for the tests concerning the bubble sort algorithm"""
+    def test_empty_list_bs(self):
         test_list = []
-        self.assertEqual(bs.bubblesort(test_list), 0)
+        self.assertEqual(bs.bubblesort(test_list), [])
 
-class testQuickSort(unittest.TestCase):
-    def testEmptyListQS(self):
+class TestQuickSort(unittest.TestCase):
+    """class for the tests concerning the quick sort algorithm"""
+    def test_empty_list_qs(self):
         test_list = []
-        self.assertEqual(qs.bubblesort(test_list), 0)
+        self.assertEqual(qs.quicksort(test_list), [])
 
 if __name__ == '__main__':
     unittest.main()
