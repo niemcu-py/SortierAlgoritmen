@@ -1,8 +1,9 @@
+"""This module runs two different sort algorithms and measures the difference in running time"""
+
 import datetime
-import time
 import random
-import BubbleSort as bs
-import QuickSort as qs
+import bubble_sort as bs
+import quick_sort as qs
 
 #bs_list = random.sample(range(0, 100), 100)
 bs_list = []
@@ -29,9 +30,9 @@ qs_time = qs_end - qs_start
 print('BubbleSort dauert:' + str(bs_time))
 print('QuickSort dauert:' + str(qs_time))
 if bs_time > qs_time:
-    Winner = 'QuickSort'
+    WINNER = 'QuickSort'
     time_diff = bs_time - qs_time
 else:
-    Winner = 'BubbleSort'
+    WINNER = 'BubbleSort'
     time_diff = qs_time -bs_time
-print('damit ist' + Winner + str(time_diff) + 'schneller')
+print('damit ist' + WINNER + str(time_diff) + 'schneller')

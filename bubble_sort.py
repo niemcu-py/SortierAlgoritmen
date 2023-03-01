@@ -1,4 +1,7 @@
+"""This module contains a bubblesort algorithm"""
+
 def bubblesort(o_list):
+    """the implementation of the bubble sort algorithm"""
     changed = True
     while changed:
         changed = False
