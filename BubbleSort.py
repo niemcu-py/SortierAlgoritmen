@@ -1,13 +1,13 @@
-def bubblesort(Olist):
+def bubblesort(o_list):
     changed = True
-    while(changed):
+    while changed:
         changed = False
-        for i in range(0, len(Olist) - 1):
-            if not(i == (len(Olist) - 1)):
-                if Olist[i] > Olist[i+1]:
-                    j = Olist[i]
-                    Olist[i] = Olist[i+1]
-                    Olist[i+1] = j
+        for i in range(0, len(o_list) - 1):
+            if not i == (len(o_list) - 1):
+                if o_list[i] > o_list[i+1]:
+                    j = o_list[i]
+                    o_list[i] = o_list[i+1]
+                    o_list[i+1] = j
                     changed = True
 
-    return(Olist)
+    return o_list
