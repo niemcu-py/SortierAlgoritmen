@@ -1,37 +1,37 @@
-import BubbleSort as bs
-import QuickSort as qs
 import datetime
 import time
 import random
+import BubbleSort as bs
+import QuickSort as qs
 
-#bslist = random.sample(range(0, 100), 100)
-bslist = []
+#BSlist = random.sample(range(0, 100), 100)
+BSlist = []
 for i in range(1,5000):
-    bslist.append(random.randint(-1000, 1000))
-qslist = bslist.copy()
+    BSlist.append(random.randint(-1000, 1000))
+QSlist = BSlist.copy()
 
-print(qslist)
+print(QSlist)
 
-startbs = datetime.datetime.now()
-bslist = bs.bubblesort(bslist)
-endbs = datetime.datetime.now()
+BSstart = datetime.datetime.now()
+BSlist = bs.bubblesort(BSlist)
+BSend = datetime.datetime.now()
 
-startqs = datetime.datetime.now()
-qslist = qs.quicksort(qslist)
-endqs = datetime.datetime.now()
+QSstart = datetime.datetime.now()
+QSlist = qs.quicksort(QSlist)
+QSend = datetime.datetime.now()
 
 print('Die sortierte Liste nach BubbleSort')
-print(str(bslist))
-timebs = endbs - startbs
+print(str(BSlist))
+BStime = BSend - BSstart
 print('Die sortierte Liste nach QuickSort')
-print(str(qslist))
-timeqs = endqs - startqs
-print('BubbleSort dauert:' + str(timebs))
-print('QuickSort dauert:' + str(timeqs))
-if timebs > timeqs:
-    winner = 'QuickSort'
-    timediff = timebs - timeqs
+print(str(QSlist))
+QStime = QSend - QSstart
+print('BubbleSort dauert:' + str(BStime))
+print('QuickSort dauert:' + str(QStime))
+if BStime > QStime:
+    Winner = 'QuickSort'
+    TimeDiff = BStime - QStime
 else:
-    winner = 'BubbleSort'
-    timediff = timeqs -timebs
-print('damit ist' + winner + str(timediff) + 'schneller')
+    Winner = 'BubbleSort'
+    TimeDiff = QStime -BStime
+print('damit ist' + Winner + str(TimeDiff) + 'schneller')

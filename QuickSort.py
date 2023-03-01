@@ -1,26 +1,26 @@
-def quicksort(list):
-    if len(list) % 2 == 0:
-        pivot = list[int(len(list)/2)]
+def quicksort(Olist):
+    if len(Olist) % 2 == 0:
+        pivot = Olist[int(len(Olist)/2)]
     else:
-        pivot = list[int((len(list)-1)/2)]
+        pivot = Olist[int((len(Olist)-1)/2)]
     
-    slist = []
-    llist = []
-    mlist = []
+    Slist = []
+    Llist = []
+    Mlist = []
 
-    for i in list:
+    for i in Olist:
         if i < pivot:
-            slist.append(i)
+            Slist.append(i)
         elif i > pivot:
-            llist.append(i)
+            Llist.append(i)
         else:
-            mlist.append(i)
+            Mlist.append(i)
     
-    if len(slist) > 1:
-        slist = quicksort(slist)
-    if len(llist) > 1:
-        llist = quicksort(llist)
+    if len(Slist) > 1:
+        Slist = quicksort(Slist)
+    if len(Llist) > 1:
+        Llist = quicksort(Llist)
 
-    rlist = slist + mlist + llist
+    rlist = Slist + Mlist + Llist
 
     return(rlist)
